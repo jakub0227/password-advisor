@@ -1,9 +1,11 @@
 import React from 'react';
-import {useTheme} from "@material-ui/core";
+import {AccordionSummary, useTheme} from "@material-ui/core";
 /** @jsx jsx  */
 import {jsx, css} from "@emotion/core";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Box from "@material-ui/core/Box";
 
 export const AboutPage = () => {
@@ -31,16 +33,21 @@ export const AboutPage = () => {
                 <Typography variant='h5' gutterBottom>
                     About our Password Advisor
                 </Typography>
-                <Typography variant='h6' gutterBottom>
-                    Legal disclaimer:
-                </Typography>
-                <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </Typography>
+                <Accordion>
+                    <AccordionSummary>
+                        <Typography>
+                            Legal disclaimer
+                        </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eius eveniet facere
+                            illum ipsam iure optio quaerat quod, repellendus saepe sint velit voluptatem, voluptates!
+                            Accusamus accusantium aperiam delectus dicta dolor hic inventore laudantium, modi mollitia
+                            nam nobis optio repudiandae sunt.
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
             </Container>
         </div>
     );
