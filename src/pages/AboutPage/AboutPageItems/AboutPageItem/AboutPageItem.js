@@ -7,19 +7,17 @@ import Accordion from "@material-ui/core/Accordion";
 
 export const AboutPageItem = (props) => {
     return (
-        <div>
-            <Accordion>
-                <AccordionSummary expandIcon={<Icon>{props.icon}</Icon>}>
-                    <Typography>
-                        {props.name}
-                    </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        {props.text}
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
-        </div>
+        <Accordion>
+            <AccordionSummary expandIcon={<Icon>{props.icon}</Icon>}>
+                <Typography variant={"subtitle2"}>
+                    {props.name}
+                </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+                <Typography variant={"overline"}>
+                    {props.text}
+                </Typography>
+            </AccordionDetails>
+        </Accordion>
     );
 };

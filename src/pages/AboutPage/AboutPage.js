@@ -11,7 +11,7 @@ export const AboutPage = () => {
     const theme = useTheme();
     const styles = {
         root: css`
-      font-family: Roboto, sans-serif;
+      font-family: 'Roboto', sans-serif;
       display: flex;
       flex-direction: column;
       width: 100%;      
@@ -22,7 +22,7 @@ export const AboutPage = () => {
         welcome: css`
             width: 100%;            
             padding: 20px;
-            margin-top: ${theme.spacing(5)} px;
+            margin-top: ${theme.spacing(5)}px;
         `,
     }
 

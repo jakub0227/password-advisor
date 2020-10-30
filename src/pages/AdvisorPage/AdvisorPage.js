@@ -7,6 +7,7 @@ import {jsx, css} from "@emotion/core";
 import Typography from "@material-ui/core/Typography";
 import logo from '../../assets/logo.jpg';
 import {ThemeProvider} from "@material-ui/styles";
+import {Welcome} from "../../components/Welcome/Welcome";
 
 
 export const AdvisorPage = () => {
@@ -26,13 +27,6 @@ export const AdvisorPage = () => {
       margin: 0 auto;
       padding: ${theme.spacing(2)}px ${theme.spacing(4)}px;
 
-`,
-        logo: css`
-    padding: ${theme.spacing(10)}px;
-`,
-        picture: css`
-    max-height: 25%;
-    max-width: 25%;
 `,
         bar: css`
     padding: ${theme.spacing(2)}px;
@@ -86,12 +80,12 @@ export const AdvisorPage = () => {
 
     return (
         <div css={styles.root}>
-            <div css={styles.logo}>
-                <img css={styles.picture} src={logo} alt={logo}/>
-            </div>
-            <Typography gutterBottom={true}/>
-            <h2>Please try your password down below:</h2>
-
+            {/*<div css={styles.logo}>*/}
+            {/*    <img css={styles.picture} src={logo} alt={logo}/>*/}
+            {/*</div>*/}
+            {/*<Typography gutterBottom={true}/>*/}
+            {/*<h2>Please try your password down below:</h2>*/}
+            <Welcome image={logo} imageAlt='ghostHacker' title='Please try your password down below:'/>
 
             <div css={styles.form}>
                 <TextField
@@ -102,7 +96,7 @@ export const AdvisorPage = () => {
                     helperText="TIP: Password should be greater than 10 characters, have at least one capital letter, contain a number, and special character"
                 />
             </div>
-            <h4>Password strength: {evaluateStrength(password)}</h4>
+            <Typography variant='subtitle1' gutterBottom>Password strength: {evaluateStrength(password)}</Typography>
             <ThemeProvider theme={createMuiTheme({
                 palette: {
                     primary: {

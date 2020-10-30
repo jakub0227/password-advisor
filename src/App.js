@@ -6,8 +6,6 @@ import {AdvisorPage} from "./pages/AdvisorPage/AdvisorPage";
 import {AboutPage} from "./pages/AboutPage/AboutPage";
 
 export const App = () => {
-    // const theme = useTheme()
-
 
     return (
         <BrowserRouter>

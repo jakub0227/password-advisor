@@ -16,7 +16,6 @@ const ACCORDIONS = [
 ]
 
 export const AboutPageItems = () => {
-
     return (
         <div>
             {ACCORDIONS.map(accordion => (
